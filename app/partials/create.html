@@ -1,0 +1,12 @@
+<div class="container">
+  <a href="#/">Home</a>
+  <div class="well">
+    <form name="post">
+      <input ng-model="newPost.author" />
+      <input ng-model="newPost.title" />
+      <textarea ng-model="newPost.body">
+      </textarea>
+      <button class="btn btn-success" ng-click="add()" />
+    </form>
+  </div>
+</div>

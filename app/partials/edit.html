@@ -1,0 +1,17 @@
+<div class="container">
+  <a href="#/">Home</a>
+  <div class="well">
+    <form name="post">
+      <div class="form-group">
+        <label for="authorInput">Author</label>
+        <input class="form-control" id="authorInput" placeholder="Author" >
+      </div>
+
+      <input ng-model="currPost.author" />
+      <input ng-model="currPost.title" />
+      <textarea ng-model="currPost.body">
+      </textarea>
+      <button class="btn btn-success" ng-click="update(currPost.id)" />
+    </form>
+  </div>
+</div>

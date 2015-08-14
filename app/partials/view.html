@@ -1,0 +1,11 @@
+<div class="container">
+  <a href="#/">Home</a>
+  <h1>{{currPost.title}}</h1>
+  <div class="pull-right">
+    <a href="#/{{ currPost.id }}/edit" class="btn btn-primary">Edit</a>
+    <button type="button" class="btn btn-danger" ng-click="remove(currPost.id)">Delete</button>
+  </div>
+  <h5>by: {{currPost.author}} @ {{currPost.timestamp}}</h5>
+  <br />
+  {{currPost.body}}
+</div>
