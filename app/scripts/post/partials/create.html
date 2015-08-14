@@ -2,11 +2,25 @@
   <a href="#/">Home</a>
   <div class="well">
     <form name="post">
-      <input ng-model="newPost.author" />
-      <input ng-model="newPost.title" />
-      <textarea ng-model="newPost.body">
-      </textarea>
-      <button class="btn btn-success" ng-click="add()" />
+      <form name="post">
+        <div class="form-group">
+          <label for="authorInput">Author</label>
+          <input class="form-control" id="authorInput" placeholder="Author" ng-model="newPost.author" />
+        </div>
+
+        <div class="form-group">
+          <label for="titleInput">Title</label>
+          <input class="form-control" id="titleInput" placeholder="Title" ng-model="newPost.title" />
+        </div>
+
+        <div class="form-group">
+          <label for="bodyInput">Body</label>
+          <textarea class="form-control" id="titleInput" ng-model="newPost.body"></textarea>
+        </div>
+
+        <div class="pull-right">
+          <button class="btn btn-success" ng-click="add()">Save Changes</button>
+        </div>
     </form>
   </div>
 </div>
