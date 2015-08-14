@@ -22,6 +22,7 @@ define(['angular', 'post/service'], function (angular) {
     };
 
     $scope.view = function () {
+
       var id = $routeParams.id;
 
       Post.get(id, function (err, data) {
@@ -47,9 +48,9 @@ define(['angular', 'post/service'], function (angular) {
     $scope.remove = function (id) {
       Post.remove(id, function (err, data){
         $scope.posts = data;
+				$location.path('/');
       });
     };
-
     if ($route.current.action) {
       $scope[$route.current.action]();
     }
